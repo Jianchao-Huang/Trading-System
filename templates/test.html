@@ -1,0 +1,27 @@
+{%  extends 'base.html' %}
+{% block main_part %}
+<div class="container-fluid">
+		<div class="row sm-gutters">
+            <div class="col-lg-12">
+				<div class="row sm-gutters">
+                    {% for i in range(3): %}
+						<div class="col-md-4 pl-0">
+							<div class="crypt-fulldiv-linechart mt-4">
+								<h4 class="coinname crypt-yellow"><i class="cf cf-{{currencies[i].imageName}}"></i> {{ currencies[i].name}}</h4>
+								<div
+									class ="crypt-individual-marketcap"
+									data-charts = "{{ currencies[i].weekdata }}"
+									data-bg = "bfe9cf"
+									data-border = "49c279">
+									<canvas></canvas>
+								</div>
+								<div class="coin-meta-data text-center">
+									<h5 class="crypt-green">{{ currencies[i].marketData['priceChangePercent']}}% <img src="../static/images/up-arrow.svg" width="15" class="crypt-market-cap-logo" alt="coin"></h5>
+									<h6>${{ currencies[i].marketData['quoteVolume'] }}</h6>
+									<a href="{{ url_for('trading') }}" class="crypt-up"><b>Buy</b></a>
+									<a href="{{ url_for('trading') }}" class="crypt-down"><b>Sell</b></a></span></p>
+								</div>
+							</div>
+                        </div>
+                    {% endfor %}
+{% endblock %}

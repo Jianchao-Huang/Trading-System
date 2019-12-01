@@ -1,0 +1,341 @@
+{%  extends 'base.html' %}
+{% block main_part %}
+	<!-- Main Content -->
+	<div class="container-full-width">
+		<div class="row sm-gutters">
+			<div class="col-xl-0 d-none d-xl-block"></div>
+			<div class="col-md-8 col-lg-8 col-xl-6">
+				<div class="crypt-dash-withdraw mt-3 d-block" id="bitcoin">
+					<div class="crypt-withdraw-body bg-white">
+						<div class="row">
+							<div class="col-md-3">
+							<div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+								<a 
+									class="nav-link active" 
+									id="v-pills-zilliqua-btc-deposit-tab" 
+									data-toggle="pill" 
+									href="#v-pills-zilliqua-btc-deposit" 
+									role="tab" 
+									aria-controls="v-pills-zilliqua-btc-deposit" 
+									aria-selected="true">
+										<i class="pe-7s-bottom-arrow"></i> Deposit
+								</a>
+
+								<a 
+									class="nav-link" 
+									id="v-pills-zilliqua-btc-withdrawl-tab" 
+									data-toggle="pill"
+									href="#v-pills-zilliqua-btc-withdrawl" 
+									role="tab" 
+									aria-controls="v-pills-zilliqua-btc-withdrawl" 
+									aria-selected="false">
+										<i class="pe-7s-up-arrow"></i> Withdraw
+								</a>
+
+								<a 
+									class="nav-link" 
+									id="v-pills-zilliqua-btc-history-tab" 
+									data-toggle="pill" 
+									href="#v-pills-zilliqua-btc-history" 
+									role="tab" 
+									aria-controls="v-pills-zilliqua-btc-history" 
+									aria-selected="false">
+										<i class="pe-7s-clock"></i> History
+								</a>
+
+								<a
+									class="nav-link"
+									id="v-pills-zilliqua-btc-balance-tab"
+									data-toggle="pill"
+									href="#v-pills-zilliqua-btc-balance"
+									role="tab"
+									aria-controls="v-pills-zilliqua-btc-balance"
+									aria-selected="false">
+										<i class="pe-7s-refresh-2"></i> Balance
+								</a>
+							</div>
+						</div>
+						<div class="col-md-9">
+							<div class="tab-content" id="v-pills-zilliqua-btc-tabContent">
+							  	<div class="tab-pane fade show active" id="v-pills-zilliqua-btc-deposit" role="tabpanel" aria-labelledby="v-pills-zilliqua-btc-deposit-tab">
+							  		<h6 class="text-uppercase">REFILL YOUR ACCOUNT NOW</h6>
+							  		<form class="deposit-form">
+							  			<div class="crypt-radio-boxed">
+								  			<input type="radio" name="payment-amount" id="payment-btc-amount1" class="payment-amount">
+								  			<label for="payment-btc-amount1">$ 30000</label>
+								  			<div class="check"></div>
+							  			</div>
+							  			<div class="crypt-radio-boxed">
+								  			<input type="radio" name="payment-amount" id="payment-btc-amount2" class="payment-amount">
+                                            <label for="payment-btc-amount2">$ 20000</label>
+								  			<div class="check"></div>
+							  			</div>
+							  			<div class="crypt-radio-boxed">
+							  				<input type="radio" name="payment-amount" id="payment-btc-amount3" class="payment-amount">
+                                            <label for="payment-btc-amount3">$ 10000</label>
+								  			<div class="check"></div>
+						  				</div>
+							  			<div class="crypt-radio-boxed">
+							  				<input type="radio" name="payment-amount" id="payment-btc-amount4" class="payment-amount"><label for="payment-btc-amount4">$ 5000 </label>
+								  			<div class="check"></div>
+						  				</div>
+							  			<div class="crypt-radio-boxed">
+							  				<input type="radio" name="payment-amount" id="payment-btc-amount5" class="payment-amount"><label for="payment-btc-amount5">$ 2000 </label>
+								  			<div class="check"></div>
+						  				</div>
+							  			<div class="crypt-radio-boxed">
+							  				<input type="radio" name="payment-amount" id="payment-btc-amount6" class="payment-amount"><label for="payment-btc-amount6">$ 1000 </label>
+								  			<div class="check"></div>
+						  				</div>
+						  				<div class="form-group mt-2">
+										    <select class="crypt-image-select" required>
+										      	<option value="">Choose A Payment Option</option>
+										      	<option value="1">Visa</option>
+										      	<option value="2">Master Card</option>
+										      	<option value="3">AMEX</option>
+										    </select>
+										</div>
+										<div class="input-group input-text-select mb-3">
+										  	<div class="input-group-prepend">
+										    	<input placeholder="Amount" type="text" class="form-control crypt-input-lg">
+										  	</div>
+										  	<select class="custom-select" name="inputGroupSelect01">
+										    	<option value="1">USD</option>
+										    	<option value="2">GBP</option>
+										    	<option value="3">EUR</option>
+										  	</select>
+										</div>
+										<a href="{{ url_for('trading') }}" class="crypt-button-red-full">Proceed To Payment</a>
+							  		</form>
+							  	</div>
+								<div class="tab-pane fade" id="v-pills-zilliqua-btc-withdrawl" role="tabpanel" aria-labelledby="v-pills-zilliqua-btc-withdrawl-tab">
+									<h4 class="crypt-down">Wire bank transfer</h4>
+							  		<p><i class="pe-7s-info"></i> Standard bank transfer will be made up to 2 workdays</p>
+							  		<form>
+							  			<div class="input-group mb-3">
+										  	<input type="text" placeholder="Amount" class="form-control" name="amount">
+										  	<div class="input-group-append">
+										    	<span class="input-group-text">USD</span>
+										  	</div>
+										</div>
+							  			<div class="input-group mb-3">
+										  	<input type="text" placeholder="Bank Account Number" class="form-control" name="bank-account">
+										  	<div class="input-group-append">
+											    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">Other Address</button>
+											    <div class="dropdown-menu">
+											      <a class="dropdown-item" href="#">234235234</a>
+											      <a class="dropdown-item" href="#">2343453453</a>
+											      <a class="dropdown-item" href="#">234234234234</a>
+											    </div>
+											  </div>
+										</div>
+										<div class="form-group">
+										    <input type="text" class="form-control" placeholder="Name" name="name">
+										</div>
+										<div class="form-group">
+										    <input type="text" class="form-control" placeholder="Swift Code" name="swift">
+										</div>
+										<div class="form-group">
+										    <div class="form-group">
+											    <select class="form-control">
+											      <option>Country</option>
+											      <option>United States</option>
+											      <option>Japan</option>
+											      <option>China</option>
+											    </select>
+											</div>
+										</div>
+										<div class="form-group">
+										    <div class="form-check">
+										      	<input class="form-check-input" type="checkbox" id="recipient-btc">
+										      	<label class="form-check-label" for="recipient-btc">
+										        Add To recipient
+										      	</label>
+										    </div>
+										</div>
+										<a href="" class="crypt-button-red-full">Initiate Withdraw</a>
+							  		</form>
+								</div>
+							  	<div class="tab-pane fade" id="v-pills-zilliqua-btc-history" role="tabpanel" aria-labelledby="v-pills-zilliqua-btc-history-tab">
+							  		<table class="table table-striped">
+							  <thead>
+							    <tr>
+  							        <th scope="col">Time</th>
+                                    <th scope="col">Crypto</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Side</th>
+                                    <th scope="col">Money</th>
+                                    </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th>22:35:59</th>
+                                          <td class="crypt-up">Buy</td>
+                                          <td class="crypt-up">0.000056</td>
+                                          <td class="crypt-up">0.000056</td>
+                                          <td class="crypt-up">0.0003456</td>
+                                          <td>5.3424984</td>
+                                        </tr>
+                                        <tr>
+                                          <th>22:35:59</th>
+                                          <td class="crypt-down">Sell</td>
+                                          <td class="crypt-down">0.000056</td>
+                                          <td class="crypt-down">0.000056</td>
+                                          <td class="crypt-down">0.0003456</td>
+                                          <td>5.3424984</td>
+                                        </tr>
+                                        <tr>
+                                          <th>22:35:59</th>
+                                          <td class="crypt-up">Buy</td>
+                                          <td class="crypt-up">0.000056</td>
+                                          <td class="crypt-up">0.000056</td>
+                                          <td class="crypt-up">0.0003456</td>
+                                          <td>5.3424984</td>
+                                        </tr>
+                                        <tr>
+                                          <th>22:35:59</th>
+                                          <td class="crypt-down">Sell</td>
+                                          <td class="crypt-down">0.000056</td>
+                                          <td class="crypt-down">0.000056</td>
+                                          <td class="crypt-down">0.0003456</td>
+                                          <td>5.3424984</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>>
+							  	</div>
+							  	<div class="tab-pane fade" id="v-pills-zilliqua-btc-balance" role="tabpanel" aria-labelledby="v-pills-zilliqua-btc-balance-tab">
+							  		<table class="table table-striped">
+									  	<thead>
+										    <tr>
+										      <th scope="col">Crypto</th>
+										      <th scope="col">Quantity</th>
+										      <th scope="col">UPL</th>
+                                                <th scope="col">RPL</th>
+                                                <th scope="col">VWAP</th>
+										    </tr>
+									  	</thead>
+									  	<tbody>
+										    <tr>
+										      <th scope="row">BTC</th>
+										      <td class="crypt-down">0.000056</td>
+										      <td>BTC</td>
+										    </tr>
+										    <tr>
+										      <th scope="row">ETH</th>
+										      <td>0.0000564</td>
+										      <td>ETH</td>
+										    </tr>
+										    <tr>
+										      <th scope="row">LTC</th>
+										      <td>0.0000234</td>
+										      <td>XHO</td>
+										    </tr>
+                                            <tr>
+										      <th scope="row">Cash</th>
+										      <td class="crypt-down">0.000056</td>
+										      <td>BTC</td>
+										    </tr>
+									  	</tbody>
+									</table>
+							  	</div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="crypt-dash-withdraw mt-3 d-none" id="litecoin">
+					<div class="crypt-withdraw-heading">
+						<div class="row">
+							<div class="col-md-3">
+								<p><b>1 LTC</b></p>
+								<p class="crypt-up"><b>$34.05 USD (3.60%)</b></p>
+							</div>
+							<div class="col-md-5">
+								<i class="pe-7s-lock icon-big"></i> 
+								<p><b>Locked: $ 10.00</b></p>
+							</div>
+							<div class="col-md-4">
+								<p><b>Total:</b></p>
+								<p class="crypt-up"><b> $ 435,634,234.00</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="crypt-dash-withdraw mt-3 d-none" id="xrp">
+					<div class="crypt-withdraw-heading">
+						<div class="row">
+							<div class="col-md-3">
+								<p><b>1 XRP</b></p>
+								<p class="crypt-up"><b>$0.306974 USD (0.17%)</b></p>
+							</div>
+							<div class="col-md-5">
+								<i class="pe-7s-lock icon-big"></i> 
+								<p><b>Locked: $ 10.00</b></p>
+							</div>
+							<div class="col-md-4">
+								<p><b>Total:</b></p>
+								<p class="crypt-up"><b> $ 435,634,234.00</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="crypt-dash-withdraw mt-3 d-none" id="monero">
+					<div class="crypt-withdraw-heading">
+						<div class="row">
+							<div class="col-md-3">
+								<p><b>1 Monero</b></p>
+								<p class="crypt-down"><b>$43.12 USD (-0.79%)</b></p>
+							</div>
+							<div class="col-md-5">
+								<i class="pe-7s-lock icon-big"></i> 
+								<p><b>Locked: $ 10.00</b></p>
+							</div>
+							<div class="col-md-4">
+								<p><b>Total:</b></p>
+								<p class="crypt-up"><b> $ 435,634,234.00</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="crypt-dash-withdraw mt-3 d-none" id="zilliqua">
+					<div class="crypt-withdraw-heading">
+						<div class="row">
+							<div class="col-md-3">
+								<p><b>1 Zilliqua</b></p>
+								<p class="crypt-up"><b>$0.018092 USD (0.29%)</b></p>
+							</div>
+							<div class="col-md-5">
+								<i class="pe-7s-lock icon-big"></i> 
+								<p><b>Locked: $ 0.00</b></p>
+							</div>
+							<div class="col-md-4">
+								<p><b>Total:</b></p>
+								<p class="crypt-up"><b> $ 23454.00</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="crypt-dash-withdraw mt-3 d-none" id="dash">
+					<div class="crypt-withdraw-heading">
+						<div class="row">
+							<div class="col-md-3">
+								<p><b>1 Dash</b></p>
+								<p class="crypt-up"><b>$67.35 USD (0.30%)</b></p>
+							</div>
+							<div class="col-md-5">
+								<i class="pe-7s-lock icon-big"></i> 
+								<p><b>Locked: $ 0.00</b></p>
+							</div>
+							<div class="col-md-4">
+								<p><b>Total:</b></p>
+								<p class="crypt-up"><b> $ 23454.00</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

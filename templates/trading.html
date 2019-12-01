@@ -1,0 +1,202 @@
+{%  extends 'base.html' %}
+{% block main_part %}
+	<!-- Main Content -->
+	<div class="container-fluid">
+		<div class="row sm-gutters">
+			<div class="col-lg-5">
+				<div class="crypt-boxed-area">
+					<h6 class="crypt-bg-head"><b class="crypt-up">BUY</b> / <b class="crypt-down">SELL</b></h6>
+                        <div class="col-md-12">
+                            <p><span><b>Choose a currency</b></span></p>
+                                <select class="custom-select" name="CryptoSelect01">
+                                    <option value="1">BTC</option>
+                                    <option value="2">ETH</option>
+                                    <option value="3">LTC</option>
+                                </select>
+                        </div>
+					<div class="row no-gutters">
+						<div class="col-md-6">
+							<div class="crypt-buy-sell-form">
+                                <p><span class="crypt-up"><b>  Buy</b></span></p>
+								<div class="crypt-buy">
+                                    <div class="input-group mb-3">
+									  	<div class="input-group-prepend">
+									    	<span class="input-group-text">Ask Price</span>
+									  	</div>
+									  	<input type="text" class="form-control" placeholder="0.02323476" readonly>
+									</div>
+									<div class="input-group mb-3">
+									  	<div class="input-group-prepend">
+									    	<span class="input-group-text">Amount</span>
+									  	</div>
+									  	<input type="number" class="form-control">
+									</div>
+									<div class="input-group mb-3">
+									  	<div class="input-group-prepend">
+									    	<span class="input-group-text">Total</span>
+									  	</div>
+									  	<input type="text" class="form-control" readonly>
+									</div>
+									<div>
+										<p>Fee: <span class="fright">2%</span></p>
+									</div>
+									<div class="text-center mt-5 mb-5 crypt-up">
+										<p>You will approximately pay</p>
+										<h4>0.09834 BTC</h4>
+									</div>
+									<div class="menu-green">
+										<a href="" class="crypt-button-green-full">Buy</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="crypt-buy-sell-form">
+								<p><span class="crypt-down"><b>  Sell</b></span></p>
+								<div class="crypt-sell">
+									<div class="input-group mb-3">
+									  	<div class="input-group-prepend">
+									    	<span class="input-group-text">Bid Price</span>
+									  	</div>
+									  	<input type="text" class="form-control" placeholder="0.02323476" readonly>
+									</div>
+									<div class="input-group mb-3">
+									  	<div class="input-group-prepend">
+									    	<span class="input-group-text">Amount</span>
+									  	</div>
+									  	<input type="number" class="form-control">
+									</div>
+									<div class="input-group mb-3">
+									  	<div class="input-group-prepend">
+									    	<span class="input-group-text">Total</span>
+									  	</div>
+									  	<input type="text" class="form-control" readonly>
+									</div>
+									<div>
+										<p>Fee: <span class="fright">2%</span></p>
+									</div>
+									<div class="text-center mt-5 mb-5 crypt-down">
+										<p>You will approximately pay</p>
+										<h4>0.09834 BTC</h4>
+									</div>
+									<div>
+										<a href="" class="crypt-button-red-full">Sell</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div id="depthchart" class="depthchart h-40 crypto-depth-chart-small-height crypt-dark-segment"></div>
+				<div>
+					<div class="crypt-market-status">
+					<div>
+					  <!-- Nav tabs -->
+					  	<ul class="nav nav-tabs">
+					    	<li role="presentation"><a href="#closed-orders"  class="active" data-toggle="tab">Closed Orders</a></li>
+					    	<li role="presentation"><a href="#balance" data-toggle="tab">Balance</a></li>
+					  	</ul>
+
+					  <!-- Tab panes -->
+					  <div class="tab-content">
+					    <div role="tabpanel" class="tab-pane active" id="closed-orders">
+					    	<table class="table table-striped">
+							  <thead>
+							    <tr>
+  							        <th scope="col">Time</th>
+                                    <th scope="col">Crypto</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Side</th>
+                                    <th scope="col">Money</th>
+                            </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th>22:35:59</th>
+							      <td class="crypt-up">Buy</td>
+							      <td class="crypt-up">0.000056</td>
+							      <td class="crypt-up">0.000056</td>
+							      <td class="crypt-up">0.0003456</td>
+							      <td>5.3424984</td>
+							    </tr>
+							    <tr>
+							      <th>22:35:59</th>
+							      <td class="crypt-down">Sell</td>
+							      <td class="crypt-down">0.000056</td>
+							      <td class="crypt-down">0.000056</td>
+							      <td class="crypt-down">0.0003456</td>
+							      <td>5.3424984</td>
+							    </tr>
+							    <tr>
+							      <th>22:35:59</th>
+							      <td class="crypt-up">Buy</td>
+							      <td class="crypt-up">0.000056</td>
+							      <td class="crypt-up">0.000056</td>
+							      <td class="crypt-up">0.0003456</td>
+							      <td>5.3424984</td>
+							    </tr>
+							    <tr>
+							      <th>22:35:59</th>
+							      <td class="crypt-down">Sell</td>
+							      <td class="crypt-down">0.000056</td>
+							      <td class="crypt-down">0.000056</td>
+							      <td class="crypt-down">0.0003456</td>
+							      <td>5.3424984</td>
+							    </tr>
+							  </tbody>
+							</table>
+					    </div>
+					    <div role="tabpanel" class="tab-pane fade" id="balance">
+					    	<table class="table table-striped">
+							  <thead>
+							    <tr>
+                                    <th scope="col">Crypto</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">UPL</th>
+                                    <th scope="col">RPL</th>
+                                    <th scope="col">VWAP</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th scope="row">BTC</th>
+							      <td>0.0000564</td>
+							      <td>6.6768876</td>
+                                    <td>6.6768876</td>
+                                    <td>6.6768876</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">ETH</th>
+							      <td>0.0000564</td>
+							      <td>6.6768876</td>
+                                    <td>6.6768876</td>
+                                    <td>6.6768876</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">LTC</th>
+							      <td>0.0000564</td>
+							      <td>6.6768876</td>
+                                    <td>6.6768876</td>
+                                    <td>6.6768876</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">Cash</th>
+							      <td>0.0000564</td>
+							      <td>6.6768876</td>
+                                    <td>6.6768876</td>
+                                    <td>6.6768876</td>
+							    </tr>
+							  </tbody>
+							</table>
+					    </div>
+					  </div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
